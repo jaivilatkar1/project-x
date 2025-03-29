@@ -32,6 +32,8 @@ Follow these steps to set up and run the Voice RAG application:
 4. **Configure API Keys:**
    - **OpenAI API Key:** Obtain from [OpenAI Platform](https://platform.openai.com/).
    - **Qdrant Cloud Credentials:** Sign up at [Qdrant Cloud](https://cloud.qdrant.io/) to acquire your API key and URL.
+     This is the readme file path for Qdrant database (https://github.com/jaivilatkar1/project- 
+     x/blob/main/Voice_RAG_Project/Qdrant_Readme.md)
    - **Environment Variables:** Create a `.env` file in the project directory with the following content:
      ```bash
      OPENAI_API_KEY='your-openai-api-key'
