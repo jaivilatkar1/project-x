@@ -108,7 +108,7 @@ This will open a local web page at:
 
 ---
 
-####  7. Demo Video
+####  8. Demo Video
 
 Here is the link for the demo video: 
 https://youtu.be/fkkvIZPbQi4
