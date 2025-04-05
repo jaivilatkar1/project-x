@@ -2,7 +2,8 @@
 
 ### 📄 README.txt – Resume ATS Checker Setup Guide
 
-#### 🔧 Prerequisites
+### 🔧 Prerequisites
+
 Ensure you have **Python 3.8+** installed. You can verify with:
 ```bash
 python --version
