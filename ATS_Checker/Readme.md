@@ -107,3 +107,10 @@ This will open a local web page at:
 - If using Gemini API, make sure your API key is active from [Google AI Studio](https://makersuite.google.com/app/apikey).
 
 ---
+
+####  7. Demo Video
+
+Here is the link for the demo video: 
+https://youtu.be/fkkvIZPbQi4
+
+---
