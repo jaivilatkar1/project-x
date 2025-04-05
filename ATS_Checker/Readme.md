@@ -54,12 +54,11 @@ You need a **Google Cloud Service Account** key to access Google Drive API.
 #### 📁 3. Folder Structure Suggestion
 
 ```
-ats_checker/
-│
-├── main.py
-├── requirements.txt
-├── .env
-└── gen-lang-client-XXXX.json
+ats_checker
+ main.py
+ requirements.txt
+ .env
+ gen-lang-client-XXXX.json
 ```
 
 ---
