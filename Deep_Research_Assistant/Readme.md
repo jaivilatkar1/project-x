@@ -122,10 +122,3 @@ streamlit run app.py
 * Keep your API key secure — do not commit it to version control.
 
 ---
-
-If you'd like, I can also create:
-
-* A production-ready README with architecture diagram
-* A Docker setup version
-* A troubleshooting section
-* A requirements.txt file template
