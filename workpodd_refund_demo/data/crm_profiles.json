@@ -1,0 +1,171 @@
+{
+  "customers": [
+    {
+      "customer_id": "CUS-1001",
+      "name": "Alice Chen",
+      "email": "alice.chen@email.com",
+      "tier": "premium",
+      "account_status": "active",
+      "refunds_ytd": 1,
+      "orders": [
+        {"order_id": "ORD-5001", "product": "Wireless Headphones Pro", "category": "electronics", "amount": 129.99, "status": "delivered", "delivered_days_ago": 12, "final_sale": false, "digital_downloaded": false},
+        {"order_id": "ORD-4988", "product": "USB-C Hub", "category": "electronics", "amount": 49.99, "status": "delivered", "delivered_days_ago": 40, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1002",
+      "name": "Bob Martinez",
+      "email": "bob.m@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 2,
+      "orders": [
+        {"order_id": "ORD-5010", "product": "Running Shoes", "category": "apparel", "amount": 89.00, "status": "delivered", "delivered_days_ago": 5, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1003",
+      "name": "Carol Williams",
+      "email": "carol.w@email.com",
+      "tier": "vip",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5022", "product": "Designer Handbag", "category": "apparel", "amount": 420.00, "status": "delivered", "delivered_days_ago": 18, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1004",
+      "name": "David Kim",
+      "email": "david.kim@email.com",
+      "tier": "standard",
+      "account_status": "flagged",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5033", "product": "Smart Watch", "category": "electronics", "amount": 199.00, "status": "delivered", "delivered_days_ago": 8, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1005",
+      "name": "Emma Thompson",
+      "email": "emma.t@email.com",
+      "tier": "premium",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5044", "product": "E-Book Bundle", "category": "digital", "amount": 29.99, "status": "delivered", "delivered_days_ago": 3, "final_sale": false, "digital_downloaded": true}
+      ]
+    },
+    {
+      "customer_id": "CUS-1006",
+      "name": "Frank O'Brien",
+      "email": "frank.ob@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5055", "product": "Winter Jacket Clearance", "category": "apparel", "amount": 59.99, "status": "delivered", "delivered_days_ago": 10, "final_sale": true, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1007",
+      "name": "Grace Liu",
+      "email": "grace.liu@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 1,
+      "orders": [
+        {"order_id": "ORD-5066", "product": "Kitchen Blender", "category": "home", "amount": 79.50, "status": "shipped", "delivered_days_ago": null, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1008",
+      "name": "Henry Davis",
+      "email": "henry.d@email.com",
+      "tier": "vip",
+      "account_status": "active",
+      "refunds_ytd": 2,
+      "orders": [
+        {"order_id": "ORD-5077", "product": "4K Monitor", "category": "electronics", "amount": 549.00, "status": "delivered", "delivered_days_ago": 22, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1009",
+      "name": "Ivy Patel",
+      "email": "ivy.patel@email.com",
+      "tier": "premium",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5088", "product": "Yoga Mat Set", "category": "fitness", "amount": 45.00, "status": "delivered", "delivered_days_ago": 50, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1010",
+      "name": "Jack Wilson",
+      "email": "jack.w@email.com",
+      "tier": "standard",
+      "account_status": "suspended",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5099", "product": "Gaming Mouse", "category": "electronics", "amount": 69.99, "status": "delivered", "delivered_days_ago": 7, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1011",
+      "name": "Karen Nguyen",
+      "email": "karen.n@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5110", "product": "Office Chair", "category": "home", "amount": 189.00, "status": "delivered", "delivered_days_ago": 28, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1012",
+      "name": "Leo Garcia",
+      "email": "leo.g@email.com",
+      "tier": "premium",
+      "account_status": "active",
+      "refunds_ytd": 3,
+      "orders": [
+        {"order_id": "ORD-5121", "product": "Bluetooth Speaker", "category": "electronics", "amount": 99.00, "status": "delivered", "delivered_days_ago": 6, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1013",
+      "name": "Mia Robinson",
+      "email": "mia.r@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5132", "product": "Custom Engraved Necklace", "category": "personalized", "amount": 120.00, "status": "delivered", "delivered_days_ago": 14, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1014",
+      "name": "Noah Brown",
+      "email": "noah.b@email.com",
+      "tier": "standard",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5143", "product": "Gift Card $100", "category": "gift_card", "amount": 100.00, "status": "delivered", "delivered_days_ago": 1, "final_sale": false, "digital_downloaded": false}
+      ]
+    },
+    {
+      "customer_id": "CUS-1015",
+      "name": "Olivia Scott",
+      "email": "olivia.s@email.com",
+      "tier": "vip",
+      "account_status": "active",
+      "refunds_ytd": 0,
+      "orders": [
+        {"order_id": "ORD-5154", "product": "Premium Skincare Set", "category": "beauty", "amount": 95.00, "status": "delivered", "delivered_days_ago": 9, "final_sale": false, "digital_downloaded": false},
+        {"order_id": "ORD-5155", "product": "Silk Pillowcase", "category": "home", "amount": 55.00, "status": "delivered", "delivered_days_ago": 9, "final_sale": false, "digital_downloaded": false}
+      ]
+    }
+  ]
+}

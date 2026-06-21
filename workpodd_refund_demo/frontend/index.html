@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopFlow AI Support — Workpodd Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>ShopFlow AI Customer Support</h1>
+      <p class="subtitle">Refund agent · Whisper STT + OpenAI TTS + Realtime voice</p>
+    </div>
+    <div class="status-pill" id="connectionStatus">Ready</div>
+  </header>
+
+  <main class="layout">
+    <section class="panel chat-panel">
+      <div class="panel-head">
+        <h2>Customer chat</h2>
+        <div class="customer-picker">
+          <label for="demoCustomer">Quick demo customer</label>
+          <select id="demoCustomer">
+            <option value="">— Select to pre-fill —</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="identity-row">
+        <input id="customerEmail" type="email" placeholder="Customer email (e.g. alice.chen@email.com)" />
+      </div>
+
+      <div class="voice-controls">
+        <button type="button" id="pttBtn" class="btn voice-btn" title="Hold to speak — Whisper STT">
+          🎤 Hold to talk (Whisper)
+        </button>
+        <button type="button" id="realtimeBtn" class="btn voice-btn secondary" title="OpenAI Realtime WebRTC">
+          📞 Live voice (Realtime)
+        </button>
+        <label class="toggle-speak">
+          <input type="checkbox" id="speakReply" checked /> Speak agent reply (TTS)
+        </label>
+      </div>
+      <p id="voiceStatus" class="voice-status"></p>
+
+      <div id="chatMessages" class="chat-messages"></div>
+
+      <form id="chatForm" class="chat-form">
+        <textarea id="chatInput" rows="2" placeholder="Type or use voice… e.g. refund order ORD-5001"></textarea>
+        <button type="submit" class="btn primary" id="sendBtn">Send</button>
+      </form>
+
+      <div class="demo-hints">
+        <strong>Try these scenarios:</strong>
+        <button type="button" class="hint-chip" data-msg="Hi, I'm alice.chen@email.com. Please refund order ORD-5001, the headphones are defective.">✅ Standard approve</button>
+        <button type="button" class="hint-chip" data-msg="I'm bob.m@email.com and need a refund for ORD-5010.">🚫 Refund limit exceeded</button>
+        <button type="button" class="hint-chip" data-msg="I'm emma.t@email.com, refund ORD-5044 ebook please.">🚫 Digital downloaded</button>
+        <button type="button" class="hint-chip" data-msg="I'm david.kim@email.com refund ORD-5033 watch.">🚫 Flagged account</button>
+      </div>
+    </section>
+
+    <section class="panel admin-panel">
+      <div class="panel-head">
+        <h2>Admin · Agent reasoning</h2>
+        <span class="session-label">Session: <code id="sessionLabel">—</code></span>
+      </div>
+      <div id="reasoningLog" class="reasoning-log"></div>
+    </section>
+  </main>
+
+  <audio id="agentAudio" style="display:none"></audio>
+  <script src="voice-realtime.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

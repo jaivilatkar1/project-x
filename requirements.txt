@@ -1,11 +1,11 @@
-streamlit
-google-generativeai
-langchain
-PyPDF2
-faiss-cpu
-langchain_google_genai
-groq
-langchain-community
-openai
-tabula
-tabulate
+# ShopFlow Workpodd demo — minimal Python dependencies
+# Install: pip install -r requirements.txt
+#
+# The demo runs inside the Django backend (manage.py runserver).
+# Parent project must wire routes in ml_backend/urls.py (see README).
+
+Django>=4.2,<5
+djangorestframework>=3.14,<4
+openai>=1.3,<2
+python-dotenv>=1.0,<2
+requests>=2.31,<3
