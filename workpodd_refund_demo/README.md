@@ -2,6 +2,8 @@
 
 Standalone vertical slice for the **Workpodd AI Customer Support Agent** challenge: an LLM-powered refund agent with CRM mock data, strict policy validation, customer chat UI, voice input, and admin reasoning logs.
 
+**Demo video walkthrough:** [Google Drive — Screen Recording (June 2026)](https://drive.google.com/file/d/1euykmw63XjwZwXR7x1B9ePO_amrhmRYc/view?usp=sharing)
+
 ## Folder structure
 
 ```
