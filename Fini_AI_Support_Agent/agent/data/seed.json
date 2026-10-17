@@ -1,0 +1,122 @@
+{
+  "customers": [
+    {
+      "id": "cust_alice",
+      "name": "Alice Chen",
+      "email": "alice@paylane.test",
+      "card_last4": "4242",
+      "status": "active",
+      "verified": true,
+      "freeze_reason": null
+    },
+    {
+      "id": "cust_bob",
+      "name": "Bob Rivera",
+      "email": "bob@paylane.test",
+      "card_last4": "1111",
+      "status": "frozen",
+      "verified": true,
+      "freeze_reason": "Unusual spend pattern flagged by risk review"
+    },
+    {
+      "id": "cust_cara",
+      "name": "Cara Ng",
+      "email": "cara@paylane.test",
+      "card_last4": "9999",
+      "status": "active",
+      "verified": false,
+      "freeze_reason": null
+    },
+    {
+      "id": "cust_dan",
+      "name": "Dan Okoro",
+      "email": "dan@paylane.test",
+      "card_last4": "7777",
+      "status": "active",
+      "verified": true,
+      "freeze_reason": null
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn_ok_50",
+      "customer_id": "cust_alice",
+      "amount": 50.0,
+      "date": "2026-10-05T14:30:00Z",
+      "merchant": "Coffee Lab",
+      "status": "settled"
+    },
+    {
+      "id": "txn_big_120",
+      "customer_id": "cust_alice",
+      "amount": 120.0,
+      "date": "2026-10-08T09:00:00Z",
+      "merchant": "City Electronics",
+      "status": "settled"
+    },
+    {
+      "id": "txn_day30",
+      "customer_id": "cust_alice",
+      "amount": 40.0,
+      "date": "2026-09-17T12:00:00Z",
+      "merchant": "Market Street Cafe",
+      "status": "settled"
+    },
+    {
+      "id": "txn_old",
+      "customer_id": "cust_alice",
+      "amount": 35.0,
+      "date": "2026-08-01T18:00:00Z",
+      "merchant": "Old Town Books",
+      "status": "settled"
+    },
+    {
+      "id": "txn_pending",
+      "customer_id": "cust_alice",
+      "amount": 28.0,
+      "date": "2026-10-16T10:00:00Z",
+      "merchant": "RideShare Co",
+      "status": "pending"
+    },
+    {
+      "id": "txn_refunded",
+      "customer_id": "cust_alice",
+      "amount": 25.0,
+      "date": "2026-10-01T11:00:00Z",
+      "merchant": "Snack Box",
+      "status": "refunded"
+    },
+    {
+      "id": "txn_alice_60b",
+      "customer_id": "cust_alice",
+      "amount": 60.0,
+      "date": "2026-10-10T16:00:00Z",
+      "merchant": "Green Grocer",
+      "status": "settled"
+    },
+    {
+      "id": "txn_bob_55",
+      "customer_id": "cust_bob",
+      "amount": 55.0,
+      "date": "2026-10-09T13:00:00Z",
+      "merchant": "Metro Transit",
+      "status": "settled"
+    },
+    {
+      "id": "txn_cara_40",
+      "customer_id": "cust_cara",
+      "amount": 40.0,
+      "date": "2026-10-06T12:00:00Z",
+      "merchant": "Corner Pharmacy",
+      "status": "settled"
+    },
+    {
+      "id": "txn_fraud_600",
+      "customer_id": "cust_dan",
+      "amount": 600.0,
+      "date": "2026-10-12T20:00:00Z",
+      "merchant": "Unknown Vendor LLC",
+      "status": "settled"
+    }
+  ]
+}

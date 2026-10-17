@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paylane Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static 'agent/css/chat.css' %}" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <div class="app" id="app"
+       data-azure-ready="{{ azure_ready|yesno:'true,false' }}"
+       data-deployment="{{ deployment }}">
+
+    <header class="top">
+      <div class="brand-block">
+        <p class="brand">Paylane</p>
+        <p class="tagline">Support that follows the rules — even when customers push.</p>
+      </div>
+      <div class="top-actions">
+        <label class="mode-switch" title="Azure uses your .env deployment; Deterministic is offline">
+          <span>Mode</span>
+          <select id="modeSelect">
+            <option value="azure" {% if azure_ready %}selected{% endif %}>Azure · {{ deployment }}</option>
+            <option value="deterministic" {% if not azure_ready %}selected{% endif %}>Deterministic</option>
+          </select>
+        </label>
+        <button type="button" class="btn ghost" id="newChatBtn">New chat</button>
+      </div>
+    </header>
+
+    <aside class="rail">
+      <section class="rail-section">
+        <h2>Try a scenario</h2>
+        <p class="rail-hint">Runs a scripted customer path against the live agent.</p>
+        <ul class="scenario-list" id="scenarioList"></ul>
+      </section>
+
+      <section class="rail-section">
+        <h2>Seed customers</h2>
+        <div class="seed-row" id="seedRow">
+          {% for u in seed_users %}
+          <button type="button" class="seed"
+                  data-fill="{{ u.email }} last4 {{ u.last4 }}">
+            {{ u.label }}
+          </button>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="rail-section status-panel">
+        <h2>Session</h2>
+        <dl class="status-grid" id="statusGrid">
+          <div><dt>Verified</dt><dd id="stVerified">no</dd></div>
+          <div><dt>Customer</dt><dd id="stCustomer">—</dd></div>
+          <div><dt>Escalated</dt><dd id="stEscalated">no</dd></div>
+          <div><dt>Ticket</dt><dd id="stTicket">—</dd></div>
+        </dl>
+      </section>
+    </aside>
+
+    <main class="stage">
+      <div class="chat-shell">
+        <div class="chat-header">
+          <div>
+            <h1>Talk to support</h1>
+            <p id="chatSub">Ask about refunds, freezes, or handoffs. Policy is enforced in tools.</p>
+          </div>
+          <div class="pulse-row" id="connPulse" data-state="idle">
+            <span class="dot"></span>
+            <span id="connLabel">Ready</span>
+          </div>
+        </div>
+        <div class="handoff-banner" id="handoffBanner" hidden>
+          This chat is paused after handoff. Click <strong>New chat</strong> before the next scenario.
+        </div>
+
+        <div class="messages" id="messages" role="log" aria-live="polite">
+          <div class="welcome" id="welcome">
+            <p class="welcome-kicker">Paylane</p>
+            <p class="welcome-lead">Hi — I can help with cards, transfers, and refunds.</p>
+            <p class="welcome-sub">I’ll verify email + last 4 before account details. Pick a scenario, or type below.</p>
+          </div>
+        </div>
+
+        <form class="composer" id="composer">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea id="messageInput" rows="1" placeholder="e.g. alice@paylane.test last4 4242"
+                    autocomplete="off"></textarea>
+          <button type="submit" class="btn primary" id="sendBtn">Send</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  {{ demo_scenarios|json_script:"scenarios-data" }}
+
+  <script src="{% static 'agent/js/chat.js' %}"></script>
+</body>
+</html>
