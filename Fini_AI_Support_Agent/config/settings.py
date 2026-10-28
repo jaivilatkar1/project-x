@@ -116,4 +116,7 @@ AZURE_OPENAI_DEPLOYMENT = (
 AGENT_SEED_PATH = BASE_DIR / "agent" / "data" / "seed.json"
 CONVERSATIONS_PATH = BASE_DIR / "conversations" / "cases.yaml"
 TRANSCRIPTS_DIR = BASE_DIR / "transcripts"
-EVAL_REPORT_PATH = BASE_DIR / "transcripts" / "eval_report.json"
+# Mode-separated folders so reviewers can tell live model vs rule-based harness apart.
+TRANSCRIPTS_AZURE_DIR = TRANSCRIPTS_DIR / "azure"
+TRANSCRIPTS_DETERMINISTIC_DIR = TRANSCRIPTS_DIR / "deterministic"
+EVAL_REPORT_PATH = TRANSCRIPTS_DIR / "eval_report.json"
