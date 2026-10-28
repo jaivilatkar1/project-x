@@ -2,7 +2,7 @@
 
 | Folder | Meaning | LLM? |
 |--------|---------|------|
-| **[`azure/`](azure/)** | **The 12 live model-run conversations** Deep asked for | Yes — Azure · gpt-4o-mini |
+| **[`azure/`](azure/)** | **The 12 live model-run conversations**  | Yes — Azure · gpt-4o-mini |
 | **[`deterministic/`](deterministic/)** | Offline harness using the **same tools/policy** | No — rule-based |
 
 ## Reviewers: start here for model runs
