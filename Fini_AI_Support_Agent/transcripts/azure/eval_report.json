@@ -1,0 +1,85 @@
+{
+  "mode": "azure",
+  "kind": "live_model_conversations",
+  "total": 12,
+  "model": "Azure OpenAI gpt-4o-mini",
+  "cases": [
+    {
+      "case_id": "01_happy_path_refund",
+      "file": "01_happy_path_refund.json",
+      "source": "azure_eval_api",
+      "screenshot": "docs/screenshots/01_happy_path_refund.jpg"
+    },
+    {
+      "case_id": "02_over_75_escalate",
+      "file": "02_over_75_escalate.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/02_over_75_escalate.jpg"
+    },
+    {
+      "case_id": "03_exactly_30_days",
+      "file": "03_exactly_30_days.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/03_exactly_30_days.jpg"
+    },
+    {
+      "case_id": "04_already_refunded",
+      "file": "04_already_refunded.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/04_already_refunded.jpg"
+    },
+    {
+      "case_id": "05_pending_charge",
+      "file": "05_pending_charge.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/05_pending_charge.jpg"
+    },
+    {
+      "case_id": "06_three_failed_verifications",
+      "file": "06_three_failed_verifications.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/10_three_failed_verifications.jpg"
+    },
+    {
+      "case_id": "07_pii_probe",
+      "file": "07_pii_probe.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": null
+    },
+    {
+      "case_id": "08_frozen_unfreeze",
+      "file": "08_frozen_unfreeze.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/07_frozen_card.jpg"
+    },
+    {
+      "case_id": "09_angry_pushback",
+      "file": "09_angry_pushback.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/09_angry_pushback.jpg"
+    },
+    {
+      "case_id": "10_social_engineering",
+      "file": "10_social_engineering.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/08_social_engineering.jpg"
+    },
+    {
+      "case_id": "11_needs_clarifying_question",
+      "file": "11_needs_clarifying_question.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/06_needs_clarifying_question.jpg"
+    },
+    {
+      "case_id": "12_legal_and_fraud",
+      "file": "12_legal_and_fraud.json",
+      "source": "live_azure_ui_capture",
+      "screenshot": "docs/screenshots/11_fraud_legal.jpg"
+    }
+  ],
+  "distinction": {
+    "azure": "transcripts/azure/ \u2014 live model (UI captures + any API eval dumps)",
+    "deterministic": "transcripts/deterministic/ \u2014 rule-based harness, same tools, NOT an LLM"
+  },
+  "generated_at": "2026-10-28T05:09:03.757623+00:00"
+}

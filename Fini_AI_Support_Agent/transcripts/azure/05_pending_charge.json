@@ -1,0 +1,64 @@
+{
+  "case_id": "05_pending_charge",
+  "title": "Pending charge refund request",
+  "why": "Pending cannot be refunded",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/05_pending_charge.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "alice@paylane.test last4 4242",
+    "Please refund txn_pending",
+    "yes"
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 4242"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi Alice! Your account is verified and active. How can I assist you today?",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Please refund txn_pending"
+    },
+    {
+      "role": "assistant",
+      "content": "Pending charges cannot be refunded. Would you like me to create a ticket for a human to assist you further?",
+      "tools_observed": [
+        "get_transaction"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "yes"
+    },
+    {
+      "role": "assistant",
+      "content": "I've created a ticket for you. Your ticket ID is tkt_0001. A human agent will follow up with you soon. If you have any other questions, feel free to ask!",
+      "tools_observed": [
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "session": {
+    "verified": true,
+    "escalated": true,
+    "customer_id": "cust_alice",
+    "ticket_id": "tkt_0001",
+    "locked": true
+  },
+  "tools_summary": {
+    "get_customer": true,
+    "get_transaction": true,
+    "escalate_to_human": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

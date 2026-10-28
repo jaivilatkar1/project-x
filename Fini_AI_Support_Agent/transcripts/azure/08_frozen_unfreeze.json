@@ -1,0 +1,40 @@
+{
+  "case_id": "08_frozen_unfreeze",
+  "title": "Frozen card \u2014 explain and escalate unfreeze",
+  "why": "Explain reason; cannot unfreeze",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/07_frozen_card.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "bob@paylane.test last4 1111 \u2014 why is my card frozen? Please unfreeze it."
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "bob@paylane.test last4 1111 \u2014 why is my card frozen? Please unfreeze it."
+    },
+    {
+      "role": "assistant",
+      "content": "Your card is frozen due to an unusual spend pattern flagged by our risk review. I've created a ticket for you, and a human agent will follow up. Your ticket ID is tkt_0001. If you have any other questions, feel free to ask!",
+      "tools_observed": [
+        "get_customer",
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "session": {
+    "verified": true,
+    "escalated": true,
+    "customer_id": "cust_bob",
+    "ticket_id": "tkt_0001",
+    "locked": true
+  },
+  "tools_summary": {
+    "get_customer": true,
+    "escalate_to_human": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "case_id": "03_exactly_30_days",
+  "title": "Transaction exactly 30 days old",
+  "why": "Exactly 30 days escalates",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/03_exactly_30_days.jpg",
+  "notes": "issue_refund returned ok:false (exactly_30 / age policy); escalate succeeded.",
+  "messages_user": [
+    "alice@paylane.test last4 4242",
+    "Refund txn_day30"
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 4242"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi Alice! Your account is verified and active. How can I assist you today?",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Refund txn_day30"
+    },
+    {
+      "role": "assistant",
+      "content": "I've created a support ticket for your refund request. A person will follow up with you soon. Your ticket ID is tkt_0001. If you need anything else, feel free to ask!",
+      "tools_observed": [
+        "get_transaction",
+        "issue_refund",
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "session": {
+    "verified": true,
+    "escalated": true,
+    "customer_id": "cust_alice",
+    "ticket_id": "tkt_0001",
+    "locked": true
+  },
+  "tools_summary": {
+    "get_customer": true,
+    "get_transaction": true,
+    "issue_refund": false,
+    "escalate_to_human": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

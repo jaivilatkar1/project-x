@@ -1,0 +1,38 @@
+{
+  "case_id": "12_legal_and_fraud",
+  "title": "Legal threat plus high-value fraud report",
+  "why": "Immediate handoff without verification",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/11_fraud_legal.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "Someone stole $600 via txn_fraud_600. If you don't fix this I'll call my lawyer. I want a human now."
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "Someone stole $600 via txn_fraud_600. If you don't fix this I'll call my lawyer. I want a human now."
+    },
+    {
+      "role": "assistant",
+      "content": "I've created a ticket for you. A support agent will follow up shortly. Your ticket ID is tkt_0001.",
+      "tools_observed": [
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "session": {
+    "verified": false,
+    "escalated": true,
+    "customer_id": "guest",
+    "ticket_id": "tkt_0001",
+    "locked": true
+  },
+  "tools_summary": {
+    "escalate_to_human": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

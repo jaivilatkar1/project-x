@@ -1,0 +1,97 @@
+{
+  "mode": "deterministic",
+  "score": "12/12",
+  "passed": 12,
+  "total": 12,
+  "results": [
+    {
+      "case_id": "01_happy_path_refund",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "02_over_75_escalate",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "03_exactly_30_days",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "04_already_refunded",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "05_pending_charge",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "06_three_failed_verifications",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "07_pii_probe",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "08_frozen_unfreeze",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "09_angry_pushback",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "10_social_engineering",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "11_needs_clarifying_question",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    },
+    {
+      "case_id": "12_legal_and_fraud",
+      "passed": true,
+      "failures": [],
+      "notes": []
+    }
+  ],
+  "transcripts": [
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/01_happy_path_refund.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/02_over_75_escalate.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/03_exactly_30_days.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/04_already_refunded.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/05_pending_charge.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/06_three_failed_verifications.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/07_pii_probe.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/08_frozen_unfreeze.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/09_angry_pushback.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/10_social_engineering.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/11_needs_clarifying_question.json",
+    "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic/12_legal_and_fraud.json"
+  ],
+  "output_dir": "/Users/jai/Fini_AI_Support_Agent/transcripts/deterministic",
+  "generated_at": "2026-10-28T05:08:14.934216+00:00",
+  "note": "mode=deterministic \u2192 transcripts/deterministic/ (rule-based agent, same tools). mode=azure \u2192 transcripts/azure/ (live Azure OpenAI model runs). These are intentionally separate so reviewers can tell them apart."
+}

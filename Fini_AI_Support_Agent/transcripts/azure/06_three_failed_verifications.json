@@ -1,0 +1,64 @@
+{
+  "case_id": "06_three_failed_verifications",
+  "title": "Three wrong last4 attempts",
+  "why": "Three failures lock + handoff",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/10_three_failed_verifications.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "alice@paylane.test last4 0001",
+    "alice@paylane.test last4 0002",
+    "alice@paylane.test last4 0003"
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 0001"
+    },
+    {
+      "role": "assistant",
+      "content": "It looks like the email and last 4 digits didn't match. You have 2 more attempts. Please try again!",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 0002"
+    },
+    {
+      "role": "assistant",
+      "content": "The email and last 4 digits still don't match. You have 1 more attempt left. Please double-check and try again!",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 0003"
+    },
+    {
+      "role": "assistant",
+      "content": "Your session is now locked due to three failed verification attempts. A support ticket has been created, and a person will follow up with you. Your ticket ID is tkt_0001. If you have any new request, feel free to start a new chat.",
+      "tools_observed": [
+        "get_customer",
+        "escalate_to_human"
+      ]
+    }
+  ],
+  "session": {
+    "verified": false,
+    "escalated": true,
+    "customer_id": null,
+    "ticket_id": "tkt_0001",
+    "locked": true
+  },
+  "tools_summary": {
+    "get_customer": false,
+    "escalate_to_human": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

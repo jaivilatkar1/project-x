@@ -1,0 +1,47 @@
+{
+  "case_id": "11_needs_clarifying_question",
+  "title": "Ambiguous refund without transaction id",
+  "why": "Ask for txn id",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/06_needs_clarifying_question.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "alice@paylane.test last4 4242",
+    "Refund my last payment please"
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 4242"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi Alice! Your account is active and verified. How can I assist you today?",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Refund my last payment please"
+    },
+    {
+      "role": "assistant",
+      "content": "Could you please provide me with the transaction ID for the payment you'd like to refund?"
+    }
+  ],
+  "session": {
+    "verified": true,
+    "escalated": false,
+    "customer_id": "cust_alice",
+    "ticket_id": null,
+    "locked": false
+  },
+  "tools_summary": {
+    "get_customer": true
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}

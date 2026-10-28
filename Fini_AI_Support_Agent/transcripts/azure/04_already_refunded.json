@@ -1,0 +1,52 @@
+{
+  "case_id": "04_already_refunded",
+  "title": "Double refund attempt",
+  "why": "Never refund twice",
+  "mode": "azure",
+  "source": "live_azure_ui_capture",
+  "model": "Azure OpenAI gpt-4o-mini",
+  "captured_at": "2026-10-17",
+  "screenshot": "docs/screenshots/04_already_refunded.jpg",
+  "notes": "Conversation captured from live Azure Web UI during original take-home work. Paired screenshot under docs/screenshots/ where listed. Not a deterministic harness run. Not a new paid API batch after Deep's 28 Oct note.",
+  "messages_user": [
+    "alice@paylane.test last4 4242",
+    "Refund txn_refunded again"
+  ],
+  "transcript": [
+    {
+      "role": "user",
+      "content": "alice@paylane.test last4 4242"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi Alice! Your account is active and verified. How can I assist you today?",
+      "tools_observed": [
+        "get_customer"
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Refund txn_refunded again"
+    },
+    {
+      "role": "assistant",
+      "content": "It looks like that transaction has already been refunded. Unfortunately, I can't process another refund for the same transaction. If you need further assistance, feel free to ask!",
+      "tools_observed": [
+        "get_transaction"
+      ]
+    }
+  ],
+  "session": {
+    "verified": true,
+    "escalated": false,
+    "customer_id": "cust_alice",
+    "ticket_id": null,
+    "locked": false
+  },
+  "tools_summary": {
+    "get_customer": true,
+    "get_transaction": true,
+    "issue_refund": false
+  },
+  "saved_at": "2026-10-28T05:09:03.757623+00:00"
+}
