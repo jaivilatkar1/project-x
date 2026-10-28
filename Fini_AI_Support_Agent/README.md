@@ -152,10 +152,19 @@ python manage.py test agent.tests.test_policy
 python manage.py run_eval --mode deterministic
 ```
 
-Report: `transcripts/eval_report.json`  
-Per-case traces: `transcripts/<case_id>.json`
+**Transcripts (clear split for reviewers):**
 
-> **Labeling:** `deterministic` = rule-based agent using the **same** policy-enforced tools (not a live model). Use this to score the harness without Azure.
+| Path | What |
+|------|------|
+| [`transcripts/azure/`](transcripts/azure/) | **12 live model-run conversations** (Azure · gpt-4o-mini) — start at [`transcripts/azure/INDEX.md`](transcripts/azure/INDEX.md) |
+| [`transcripts/deterministic/`](transcripts/deterministic/) | Rule-based harness (same tools, **not** an LLM) |
+
+```bash
+python manage.py run_eval --mode deterministic   # → transcripts/deterministic/
+python manage.py run_eval --mode azure           # → transcripts/azure/ (needs .env)
+```
+
+> **Labeling:** Do not treat `deterministic/` as model evidence. Live model evidence is **`transcripts/azure/`** (+ `docs/screenshots/`).
 
 ### 4. Live model eval
 
