@@ -60,6 +60,12 @@ def save_transcript(
     return path
 
 
+def _out_dir_for_mode(mode: ModeName) -> Path:
+    if mode == "azure":
+        return settings.TRANSCRIPTS_AZURE_DIR
+    return settings.TRANSCRIPTS_DETERMINISTIC_DIR
+
+
 def run_all(
     mode: ModeName = "deterministic",
     case_ids: list[str] | None = None,
@@ -68,12 +74,13 @@ def run_all(
     if case_ids:
         cases = [c for c in cases if c["id"] in case_ids]
 
+    out_dir = _out_dir_for_mode(mode)
     checks: list[CheckResult] = []
     transcript_paths: list[str] = []
 
     for case in cases:
         result, check = run_case(case, mode=mode)
-        path = save_transcript(case, result, check, settings.TRANSCRIPTS_DIR)
+        path = save_transcript(case, result, check, out_dir)
         transcript_paths.append(str(path))
         checks.append(check)
 
@@ -93,12 +100,18 @@ def run_all(
             for c in checks
         ],
         "transcripts": transcript_paths,
+        "output_dir": str(out_dir),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "note": (
-            "mode=deterministic uses the offline rule-based agent with the same "
-            "policy-enforced tools. mode=azure uses live Azure OpenAI transcripts."
+            "mode=deterministic → transcripts/deterministic/ (rule-based agent, same tools). "
+            "mode=azure → transcripts/azure/ (live Azure OpenAI model runs). "
+            "These are intentionally separate so reviewers can tell them apart."
         ),
     }
     settings.TRANSCRIPTS_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    report_path = out_dir / "eval_report.json"
+    report_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    # Also write a root pointer report for the mode just run.
     settings.EVAL_REPORT_PATH.write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report
